@@ -8,7 +8,7 @@
 	@each $grid-size in $grid-sizes {
 		@for $i from 1 through $grid-size {
 			.#{$breakpoint-id}#{$i}-#{$grid-size} {
-				@extend %column;
+				//@extend %column;
 				@include span-columns( $i, $grid-size );
 			}
 		}
@@ -29,7 +29,7 @@
 	}
 }
 
-%column {
+.column {
 	text-align: left;
 	direction: ltr;
 	vertical-align: top;
@@ -38,9 +38,11 @@
 	letter-spacing: normal;
 	white-space: normal;
 	padding-left: $grid-gutter-width;
+	width: 100%; // Mobile First
+	// No need to add any other width class by default so all columns are 100% by default
 }
 
-.row.row--flush > %column {
+.row.row--flush > .column {
 	padding-left: 0;
 }
 
