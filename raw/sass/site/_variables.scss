@@ -26,6 +26,15 @@
 
 // Colours
 	// Try not to give colours a colourful name - they could change in the future.
+
+		// LP - Notes
+		// Or you could set a variable with a colourful name and then use it in the non-colourful variable name?
+		// I can't tell what the primary colour actually is from its hex code.
+		// But if we used something like
+		// $ruby-red: #d94c3e;
+		// $colour-primary: $ruby-red;
+		// We now have the best of both worlds!
+
 	$colour-primary: #d94c3e;
 	$colour-link: #333;
 	$colour-link--hover: lighten( $colour-link, 30% );
